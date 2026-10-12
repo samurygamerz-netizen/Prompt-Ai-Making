@@ -1,0 +1,20 @@
+{
+  "name": "system.get_status",
+  "description": "Read basic local host health metrics",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "include": {"type": "array", "items": {"type": "string", "enum": ["cpu", "memory", "disk", "uptime"]}}
+    },
+    "additionalProperties": false
+  },
+  "permission_tier": "P0",
+  "timeout_seconds": 5,
+  "requires_confirmation": false,
+  "output_schema": {
+    "type": "object",
+    "properties": {"ok": {"type": "boolean"}, "metrics": {"type": "object"}, "observed_at": {"type": "string"}},
+    "required": ["ok", "metrics", "observed_at"],
+    "additionalProperties": false
+  }
+}
