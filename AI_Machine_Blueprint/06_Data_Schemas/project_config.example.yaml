@@ -1,0 +1,33 @@
+project:
+  name: "Personal AI Computer Platform"
+  environment: "prototype"
+  timezone: "Asia/Kolkata"
+runtime:
+  mode: "hybrid" # local | hybrid | cloud
+  max_task_steps: 8
+  task_timeout_seconds: 120
+  require_confirmation_for: [destructive, privileged, external_side_effect, physical_actuation]
+models:
+  local_enabled: false
+  local_endpoint: "http://127.0.0.1:8080"
+  local_model_id: "configure-after-benchmark"
+  cloud_enabled: false
+  cloud_provider: "configure-provider"
+  secret_reference: "AI_PROVIDER_API_KEY"
+  send_private_files_to_cloud: false
+voice:
+  push_to_talk: true
+  wake_word_enabled: false
+  languages: ["hi-IN", "en-IN", "Hinglish"]
+tools:
+  allowlist: ["system.get_status", "files.search_allowed_roots", "apps.launch_allowlisted"]
+  allowed_roots: ["~/AI_Workspace"]
+  arbitrary_shell_enabled: false
+devices:
+  enrollment_required: true
+  public_inbound_control: false
+  per_device_permissions: true
+logging:
+  audit_enabled: true
+  redact_secrets: true
+  retention_days: 30
