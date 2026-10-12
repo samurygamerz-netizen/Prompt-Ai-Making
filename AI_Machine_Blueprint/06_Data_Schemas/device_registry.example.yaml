@@ -1,0 +1,13 @@
+devices:
+  - device_id: "replace-with-enrolled-id"
+    display_name: "Study PC"
+    device_type: "windows_pc"
+    connection: "authenticated_agent"
+    enabled: false
+    capabilities: ["system.get_status"]
+    permissions:
+      allow_read_only: true
+      allow_file_transfer: false
+      allow_remote_commands: false
+    last_seen: null
+# Enroll through an authenticated setup flow; never put private keys here.
