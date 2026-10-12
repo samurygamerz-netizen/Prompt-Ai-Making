@@ -1,0 +1,19 @@
+ID,Phase,Task,Priority,Dependency,Deliverable,Acceptance Criteria,Status
+M0.1,Requirements,Record budget and current PC specs,P0,None,Requirements sheet,CPU RAM storage GPU documented,Not started
+M0.2,Requirements,List owned devices and desired capabilities,P0,M0.1,Device inventory,Each device has owner and control scope,Not started
+M1.1,Prototype,Create UI and text command path,P0,M0.1,Minimal UI,Text reaches orchestrator,Not started
+M1.2,Prototype,Implement model adapter,P0,M1.1,Model adapter,Timeout and error handling tested,Not started
+M1.3,Prototype,Implement read-only status tools,P0,M1.1,Status tools,Metrics match OS sources,Not started
+M1.4,Security,Implement typed tool broker,P0,M1.1,Tool broker,Unknown tools and args rejected,Not started
+M2.1,Voice,Integrate STT with transcript preview,P1,M1.1,Voice input,Ambiguous commands clarified,Not started
+M2.2,Voice,Integrate TTS and cancellation,P1,M2.1,Voice output,Playback can be stopped,Not started
+M3.1,Host control,Add allowlisted app launch,P1,M1.4,App launcher,Only approved apps launch,Not started
+M3.2,Host control,Add sandboxed file tools,P1,M1.4,File tools,Access stays within allowed roots,Not started
+M4.1,Routing,Add local/cloud routing,P1,M1.2,Model router,Privacy/fallback tested,Not started
+M4.2,Memory,Add user-controlled memory,P2,M1.1,Memory service,User can inspect/edit/delete,Not started
+M5.1,Devices,Implement device enrollment,P1,M1.4,Device gateway,Unenrolled devices rejected,Not started
+M5.2,Devices,Add per-device permissions,P1,M5.1,Permission registry,Revoked access fails,Not started
+M6.1,OS,Build reproducible Linux image,P2,M1.1,Custom OS image,Image boots in VM and target,Not started
+M6.2,OS,Add integrity checks and rollback,P2,M6.1,Update flow,Failed update returns to known-good,Not started
+M7.1,Release,Automate tests,P1,M1.4,Test suite,Critical tests pass,Not started
+M7.2,Release,Write recovery guide,P2,M6.1,Operations guide,Restore procedure demonstrated,Not started
